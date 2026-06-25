@@ -1,0 +1,69 @@
+.winner-popUp
+  position: absolute
+  top: 50%
+  left: 50%
+  z-index: 20
+  padding: 24px 42px
+  border: 2px solid #ffd166
+  border-radius: 18px
+  background: radial-gradient(circle at top, #2b2d42, #111)
+  color: #fff
+  font-size: 32px
+  font-weight: 800
+  letter-spacing: 1px
+  text-transform: uppercase
+  pointer-events: none
+
+  transform: translate(-50%, -50%)
+
+  box-shadow: 0 0 18px #ffd166, 0 0 40px rgba(255, 209, 102, 0.45)
+
+  animation: winner-popUp 3s forwards
+
+  &::before,
+  &::after
+    content: "🏆"
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    font-size: 28px
+    animation: winner-popUp-bounce 0.8s ease-in-out infinite alternate
+
+  &::before
+    left: -42px
+
+  &::after
+    right: -42px
+
+@keyframes winner-popUp
+  0%
+    opacity: 0
+    transform: translate(-50%, -50%) scale(0.6)
+
+  15%
+    opacity: 1
+    transform: translate(-50%, -50%) scale(1)
+
+  25%
+    box-shadow: 0 0 14px #ffd166, 0 0 30px rgba(255, 209, 102, 0.35)
+
+  50%
+    box-shadow: 0 0 28px #ffd166, 0 0 70px rgba(255, 209, 102, 0.75)
+
+  75%
+    box-shadow: 0 0 14px #ffd166, 0 0 30px rgba(255, 209, 102, 0.35)
+
+  85%
+    opacity: 1
+    transform: translate(-50%, -50%) scale(1)
+
+  100%
+    opacity: 0
+    transform: translate(-50%, -50%) scale(0.6)
+
+@keyframes winner-popUp-bounce
+  from
+    transform: translateY(-50%) scale(1)
+
+  to
+    transform: translateY(-65%) scale(1.15)

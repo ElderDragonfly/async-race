@@ -1,0 +1,27 @@
+@use '_vars' as vars
+@use '_mixins' as mixins
+
+*
+    margin: 0
+    padding: 0
+
+.button
+    @include mixins.button
+
+.button--set
+    background-color: vars.$button--set
+.button--switch
+    background-color: vars.$button--switch
+
+.disabled, .disabled-update
+    pointer-events: none
+    opacity: 0.5;
+
+.app
+    display: flex
+    flex-direction: column
+
+    padding: 5px
+
+body
+    background-color: #4e3d58

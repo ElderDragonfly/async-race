@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    // Включено в strict
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    // До сих пор
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "lib": ["DOM", "ES2020"]
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

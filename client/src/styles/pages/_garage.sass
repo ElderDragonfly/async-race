@@ -1,0 +1,77 @@
+@use '../base/_vars' as vars
+
+.garage
+    display: flex
+    flex-direction: column
+    gap: 20px
+
+.garage__controls
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+.garage__form
+    display: flex
+    justify-content: start
+    align-items: center
+    gap: vars.$button--gap
+
+.garage__actions
+    display: flex
+    gap: vars.$button--gap
+
+.garage__cars
+    position: relative
+    display: flex
+    flex-direction: column
+    gap: vars.$button--gap * 2
+.garage__cars-limit
+    display: flex
+    flex-direction: column
+    gap: vars.$button--gap * 1.5
+
+.garage__car
+    display: flex
+    flex-direction: column
+    gap: vars.$button--gap
+
+.car__settings
+    display: flex
+    gap: vars.$button--gap
+.car__controls
+    display: flex
+.car__track
+    position: relative
+    flex-grow: 2
+    min-height: 32px
+    border-bottom: 2px dashed black
+    padding-right: 34px
+    &::after
+        content: "🏁"
+        position: absolute
+        right: 40px
+        bottom: 2px
+        font-size: 28px
+        line-height: 1
+        z-index: 2
+        pointer-events: none
+.car__image
+    position: absolute
+    bottom: -4px
+    width: 40px
+    height: 30px
+    flex-shrink: 0
+.car__controls
+    display: flex
+    gap: vars.$button--gap
+.car__engine
+    flex-grow: 2
+    display: flex
+    gap: vars.$button--gap
+    button
+        padding: 2px 5px
+
+
+.garage__pagination
+    display: flex
+    gap: vars.$button--gap
